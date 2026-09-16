@@ -1,0 +1,20 @@
+# Assignment 2 — Factory Method & Abstract Factory
+
+**Theme:** Coffee Kiosk
+
+## Part A — Factory Method
+Creates one product (a `Drink`) — `Espresso`, `Latte`, or `Cappuccino` —
+depending on which `DrinkCreator` subclass is used. The client never calls
+`new Espresso()` directly.
+
+## Part B — Abstract Factory
+Creates a consistent family of order supplies — `Cup + Lid + Receipt` — that
+must all come from the same brand. Two families: `ClassicSupplyFactory`
+(paper cup, plastic lid, printed receipt) and `EcoSupplyFactory` (reusable
+cup, biodegradable lid, digital receipt). `CoffeeKiosk` receives the factory
+through its constructor and only depends on the `Cup`/`Lid`/`Receipt`
+interfaces.
+
+## Run
+javac Main.java factorymethod/*.java abstractfactory/*.java -d out
+java -cp out Main
